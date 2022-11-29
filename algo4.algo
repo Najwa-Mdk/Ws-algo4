@@ -1,0 +1,14 @@
+PROCEDURE tri_insertion(VAR arr:ARRAY_OF INTEGER)
+VAR
+    i, j, a : INTEGER ;
+BEGIN
+    FOR i FROM 1 TO arr.length-1 DO
+        a := arr[i]
+        j := i-1
+    while (j > 0 and arr[j] > a) DO
+        arr[j+1] := arr[j]
+        j := j-1
+    END_while
+        arr[j+1] := a ;
+    END_FOR
+END
